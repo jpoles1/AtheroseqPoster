@@ -1,0 +1,137 @@
+body{
+    background-color: white;
+    font-family: arial;
+    margin: 0;
+}
+#container{
+    width: 48in;
+    height: 52in;
+    border: solid 8px black;
+    overflow: hidden;
+    padding: .5in 0;
+}
+/*Font Sizing*/
+h1{
+    font-size: 85pt;
+    margin: 0px;
+    padding: 0 2%; 
+}
+h2{
+    font-size: 80pt;
+    margin: 0px;
+}
+h3{
+    font-size: 45pt;
+    margin: 0px;
+}
+h4{
+    font-size: 53pt;
+    margin: 0 0 25px 0;
+}
+h5{
+    font-size: 48pt;
+    margin: 0px;
+}
+.figcaption{
+    font-size: 24pt;
+    margin-top: 20px;
+}
+#refs li{
+    font-size: 20pt;
+    padding-bottom: 12px;
+}
+a{
+    color: black;
+}
+/*Setup Header Styles*/
+#header{
+    padding-top: 25px;
+    width: 100%;
+    text-align: center;
+}
+#intro{
+    width: 100%;
+    color: black;
+}
+.contbox{
+    font-size: 32pt;
+    clear: none;
+    float:left;
+    padding: 40px;
+    line-height: 1.25;
+    border-radius: 15px;
+    position: relative;
+}
+.thirdcol{
+    width: 29%;
+}
+#pathology ul{
+    margin: 5px;
+}
+#pathology li{
+    margin-left: 15px;
+    list-style: none;
+    padding-top: 2px;
+    vertical-align: middle;
+    white-space: normal;
+
+}
+.dashlist{
+    list-style: none;
+}
+.dashlist li{
+    margin-bottom: 5px;
+}
+.dashlist li:before {
+    content: "- ";
+}
+.flexrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+.flexcol{
+    height: 96%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+break{
+    flex-basis: 100%;
+    width: 0px; 
+    height: 0px; 
+    overflow: hidden;
+  }
+#taxalist{
+    text-align: center;
+    list-style: none;
+}
+#taxalist li{
+    clear: none;
+    float: left;
+    padding: 20px;
+    margin: 5px 0 5px 0;
+    border: solid #333 1px;
+    background-color: #002469;
+    font-weight: bold;
+    color: #a4a6a8;
+    font-size: 36pt;
+    border-radius: 15px;
+}
+.break{
+    width: 100%;
+    height: 150px;
+    background-image: url(res/spirodiagram.png);
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.cite{
+    position: absolute;
+    right: 5px;
+    bottom: 0px;
+    font-size: 20pt;
+}
