@@ -14,10 +14,10 @@
             <h3>Jian-Da Lin, Hitoo Nishi, Jordan Poles, Caroline Mccauley, Karishma Rahman, Ashly Hine, Nikollaq Vozhilla, Edward
                 A. Fisher and P'ng Loke</h3>
         </div>
-        <div class="break"></div>
+        <br><br>
         <div class="">
-            <div id="intro" class="flexcol">
-                <div id="abstract" class="contbox thirdcol">
+            <div class="flexcol">
+                <div class="contbox thirdcol">
                     <h4 style="text-align: center;">Abstract:</h4>
                     We have previously shown that states of disease progression and regression are strongly associated with the M1/M2 activation
                     status of inflammatory monocyte-derived macrophage populations in the atherosclerotic plaques. However,
@@ -29,7 +29,7 @@
                     unexpected plasticity of CX3CR1+ monocyte derived cells and the role they may play in the dynamics of
                     an atherosclerotic plaque.
                 </div>
-                <div id="taxonomy" class="contbox thirdcol">
+                <div class="contbox thirdcol">
                     <h4 style="text-align: center;">Guding Questions:</h4>
                     1) Identify the population of origin for plaque-resident macrophages
                     <ul class="dashlist">
@@ -46,7 +46,7 @@
                         <li>What genes are over-expressed in each experimental group?</li>
                     </ul>
                 </div>
-                <div id="pathology" class="contbox thirdcol">
+                <div class="contbox thirdcol">
                     <h4 style="text-align: center;">Methods:</h4>
                     <img src="res/img/exp-design.png" style="width: 100%;">
                 </div>
@@ -54,43 +54,21 @@
                 <div class="contbox thirdcol">
                     <h4 style="text-align: center;">Visualization of Single Cell Clustering:</h4>
                     <img src="res/img/tsne.png" style="width: 100%;">
-                    <div style="text-align: justify;">
                     After pre-processing, we use the Louvain community detection algorithm for clustering of cells from both experiemntal groups. 
                     We then use PCA (with 32 dimensions) followed by t-SNE for visualization of the single cell populations in 2-dimensions. 
                     Above are t-SNE plots of the Louvain clusters alongside the experimental group to which each cell belongs.
-                    </div>
                 </div>
-                <div id="taxonomy" class="contbox thirdcol">
-                    <h4 style="text-align: center;">Objectives:</h4>
-                    Objective 1:
-                    <ul class="dashlist">
-                        <li>Mother yaw (lesion) appears at site of exposure, grows with time</li>
-                        <li>Commonly found on the legs and ankles</li>
-                        <li>Incubation period ranges from 10-90 days</li>
-                    </ul>
-                    Second Stage:
-                    <ul class="dashlist">
-                        <li>After 3 weeks to 2 years, secondary lesions appear</li>
-                        <li>Joint pain and malaise are common</li>
-                        <li>Palms and soles may fissure making walking difficult</li>
-                    </ul>
-                    Third Stage:
-                    <ul class="dashlist">
-                        <li>Develops after >5 years of untreated infection</li>
-                        <li>Chronic destruction of heart, skin and bone</li>
-                    </ul>
-                    <div class="cite">
-                        (Mitjà
-                        <i>et al.</i> 2013)
-                    </div>
-
-                    <div class="cite">
-                        (Uniprot DB, Retreived Nov. 2015)
-                    </div>
+                <div class="contbox thirdcol">
+                    <h4 style="text-align: center;">Experimental Group Representation by Cluster:</h4>
+                    <img src="res/img/louvain-prop.png" style="width: 100%;">
+                    Here we compare the proportion of the two experimental groups composing each of the clusters.
+                    On the left is represented the percentage of each experimental groups's cells found in each cluster.
+                    On the right is the proportion of each cluster which is composed by each experimental group.
                 </div>
                 <div id="pathology" class="contbox thirdcol">
-                    <h4 style="text-align: center;">Louvain Clustering and t-SNE:</h4>
-                    <img src="res/img/tsne.png" style="width: 100%;">
+                    <h4 style="text-align: center;">Heterogeneity of Louvain Clusters:</h4>
+                    <img src="res/img/top-gene-heatmap.png" style="width: 100%;">
+                    
                 </div>
             </div>
         </div>

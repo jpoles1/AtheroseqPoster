@@ -5,7 +5,7 @@ body{
 }
 #container{
     width: 48in;
-    height: 52in;
+    height: 42in;
     border: solid 8px black;
     overflow: hidden;
     padding: .5in 0;
@@ -43,15 +43,14 @@ h5{
 a{
     color: black;
 }
+img{
+    margin-bottom: .25in;
+}
 /*Setup Header Styles*/
 #header{
     padding-top: 25px;
     width: 100%;
     text-align: center;
-}
-#intro{
-    width: 100%;
-    color: black;
 }
 .contbox{
     font-size: 32pt;
@@ -61,6 +60,7 @@ a{
     line-height: 1.25;
     border-radius: 15px;
     position: relative;
+    text-align: justify;
 }
 .thirdcol{
     width: 29%;
@@ -106,22 +106,6 @@ break{
     height: 0px; 
     overflow: hidden;
   }
-#taxalist{
-    text-align: center;
-    list-style: none;
-}
-#taxalist li{
-    clear: none;
-    float: left;
-    padding: 20px;
-    margin: 5px 0 5px 0;
-    border: solid #333 1px;
-    background-color: #002469;
-    font-weight: bold;
-    color: #a4a6a8;
-    font-size: 36pt;
-    border-radius: 15px;
-}
 .break{
     width: 100%;
     height: 150px;
