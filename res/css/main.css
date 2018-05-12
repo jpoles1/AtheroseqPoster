@@ -71,7 +71,7 @@ hr{
     text-align: justify;
 }
 .thirdcol{
-    width: 29%;
+    width: 30%;
     border: 2px solid black;
 }
 #pathology ul{
@@ -102,10 +102,11 @@ hr{
     flex-wrap: wrap;
 }
 .flexcol{
-    height: 52in;
+    height: 54in;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
+    justify-content: flex-start;
     align-content: space-around;
     flex-wrap: wrap;
 }

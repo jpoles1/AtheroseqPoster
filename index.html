@@ -60,7 +60,7 @@
                 <div style="text-align-last: center">
                     - Cx3cr1<sup>CreERT2-IRES-EYFP</sup> mice which express a tamoxifen (TAM)-inducible Cre recombinase (CreERT2) under the control of the endogenous Cx3cr1 promoter, followed by an IRES-EYFP element 
                 </div>                
-                <h4>Mice Treated with HFD and then progression/regression diet</h4>
+                <h4>Treatment Groups</h4>
                 <img src="res/img/exp-design.png" style="width: 100%;">
                 <h4>Cells Extracted and Processed</h4>
 
@@ -83,7 +83,15 @@
                 <div style="height: .3in;"></div>
                 - Scanpy then used to generate diffusion pseudotime (DPT) values for each cell relative to a Cx3cr1 high root cell (Wolf 2018).
             </div>
-            <break></break>
+            <div class="contbox thirdcol">
+                <h2>Fluorescence Microscopy:</h2>
+                <hr>
+                <img src="res/img/fig1a.png" style="width: 100%;">
+                <img src="res/img/fig1b.png" style="width: 100%;">
+                After pre-processing, we use the Louvain community detection algorithm for clustering of cells from both experiemntal groups. 
+                We then use PCA (with 32 dimensions) followed by t-SNE for visualization of the single cell populations in 2-dimensions. 
+                Above are t-SNE plots of the Louvain clusters alongside the experimental group to which each cell belongs.
+            </div>
             <div class="contbox thirdcol">
                 <h2>Visualization of Single Cell Clustering:</h2>
                 <hr>
@@ -119,7 +127,6 @@
                 We see that our Cx3cr1 positive cell population, largely localized in louvain cluster 7, falls at the far end of the diffuion map. 
                 Notably, cluster 3 stands out from our other populations
             </div>
-            <break></break>
             <div class="contbox thirdcol">
                 <h2>References:</h2>
                 <hr>
