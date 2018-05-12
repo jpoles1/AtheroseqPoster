@@ -125,7 +125,23 @@
                 <img src="res/img/dpt.png" style="width: 100%;">
                 - Ran diffusion pseudotime, which uses a random-walk based model in order to reconstruct the path taken by differentiating cells.
                 <div class="results-spacer"></div>
-                - Cx3cr1 positive cell population, largely localized in louvain cluster 7, falls at the far end of the diffuion map, suggesting it is either a start or endpoint of differentiation. 
+                - Cx3cr1 positive cell population, largely localized in louvain cluster 7, falls at the far end of the diffuion map, suggesting it is either a start or endpoint of differentiation.
+            </div>
+            <div class="contbox thirdcol">
+                <h2>Cell Cycle Gene Expression:</h2>
+                <hr>
+                <img src="res/img/stemness.png" style="width: 100%;">
+                - Cell cycle gene expression values associated with the G1/S checkpoint, the S phase, the G2 phase, and the G2/M checkpoint were identified and summed for each cell. The average was taken for each cluster.
+                <div class="results-spacer"></div>
+                - Cluster 7 expresses cell cycle genes at much higher levels than any other cluster, suggesting it is proliferative, and that it may gives rise to the differentiating cell lineages in our overall population. 
+            </div>
+            <div class="contbox thirdcol">
+                <h2>Conclusions:</h2>
+                <hr>
+                <h4>Single Cell Clustering and Feature Selection</h4>
+                - 32 principal compenents were derived by PCA and used to perform Louvain community detection, and t-SNE visualization.
+                <div style="height: .3in;"></div>
+                - Scanpy used to perform One vs Rest statistical testing with the overestimated-variance T-test, allowing for identification of genes which were significantly overexpressed in each Louvain cluster (Wolf 2018).
             </div>
             <div class="contbox thirdcol">
                 <h2>References:</h2>
