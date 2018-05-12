@@ -9,67 +9,128 @@
 <body>
     <div id="container">
         <div id="header">
-            <h1>Single-cell RNA sequencing reveals heterogeneity of plaque macrophages derived from CX3CR1+ monocytes in atherosclerosis
-                progression and regression</h1>
-            <h3>Jian-Da Lin, Hitoo Nishi, Jordan Poles, Caroline Mccauley, Karishma Rahman, Ashly Hine, Nikollaq Vozhilla, Edward
-                A. Fisher and P'ng Loke</h3>
+            <h1>
+                Single-cell RNA sequencing reveals heterogeneity of plaque macrophages derived from CX3CR1+ monocytes in atherosclerosis
+                progression and regression
+            </h1>
+            <br><br>
+            <h3>
+                Jian-Da Lin, Hitoo Nishi, Jordan Poles, Caroline Mccauley, Karishma Rahman, Ashly Hine, Nikollaq Vozhilla, Edward
+                A. Fisher and P'ng Loke
+            </h3>
         </div>
-        <br><br>
-        <div class="">
-            <div class="flexcol">
-                <div class="contbox thirdcol">
-                    <h4 style="text-align: center;">Abstract:</h4>
-                    We have previously shown that states of disease progression and regression are strongly associated with the M1/M2 activation
-                    status of inflammatory monocyte-derived macrophage populations in the atherosclerotic plaques. However,
-                    the dynamics of monocyte colonization and transformation to resident macrophage populations during either
-                    plaque progression or regression are poorly understood. We use a combination of tamoxifen inducible fate
-                    mapping and single-cell RNA sequencing methodologies to profile arterial plaque-resident cells derived
-                    from CX3CR1+ monocyte precursors in mice. Overall, this study highlights previously unidentified genes
-                    and programs in macrophages associated with atherosclerosis progression and regression, uncovering the
-                    unexpected plasticity of CX3CR1+ monocyte derived cells and the role they may play in the dynamics of
-                    an atherosclerotic plaque.
+        <div style="height: 1in;"></div>
+        <div class="flexcol">
+            <div class="contbox thirdcol">
+                <h2>Abstract:</h2>
+                <hr>
+                - We have previously shown that atherosclerosis progression and regression are strongly associated with the M1/M2 activation status of inflammatory monocyte-derived macrophage populations in atherosclerotic plaques. 
+                <div style="height: .3in;"></div>
+                However, the dynamics of monocyte colonization and transformation to resident macrophage populations during either
+                plaque progression or regression are poorly understood. 
+                <div style="height: .3in;"></div>
+                - We use a combination of tamoxifen inducible fate mapping and single-cell RNA sequencing to profile arterial plaque-resident cells derived from CX3CR1+ monocyte precursors in mice. 
+                <div style="height: .3in;"></div>
+                - Overall, this study highlights previously unidentified genes and programs in macrophages associated with atherosclerosis progression and regression, uncovering the
+                unexpected plasticity of CX3CR1+ monocyte derived cells and the role they may play in the dynamics of
+                an atherosclerotic plaque.
+            </div>
+            <div class="contbox thirdcol">
+                <h2>Guding Questions:</h2>
+                <hr>
+                1) Identify the population of origin for plaque-resident macrophages
+                <ul class="dashlist">
+                    <li>What genes are highly expressed in this population?</li>
+                    <li>What cell type does this population resemble?</li>
+                </ul>
+                2) Characterize heterogeity of plaque-resident Cx3cr1<sup>+</sup> macrophage derived cells:
+                <ul class="dashlist">
+                    <li>What are the characteristic expression patterns of each cluster?</li>
+                </ul>
+                3) Identify differences in populations found in plaque progression and regression:
+                <ul class="dashlist">
+                    <li>Are certain cell populations preferentially found in each experimental group?</li>
+                    <li>What genes are over-expressed in each experimental group?</li>
+                </ul>
+            </div>
+            <div class="contbox thirdcol">
+                <h2>Methods:</h2>
+                <hr>
+                <h4>Transgenic Mice</h4>
+                <div style="text-align-last: center">
+                    - Cx3cr1<sup>CreERT2-IRES-EYFP</sup> mice which express a tamoxifen (TAM)-inducible Cre recombinase (CreERT2) under the control of the endogenous Cx3cr1 promoter, followed by an IRES-EYFP element 
+                </div>                
+                <h4>Mice Treated with HFD and then progression/regression diet</h4>
+                <img src="res/img/exp-design.png" style="width: 100%;">
+                <h4>Cells Extracted and Processed</h4>
+
+                <h4>Single Cell Preprocessing</h4>
+                <div style="text-align-last: center">
+                    - Using the Cellranger analysis pipeline (cellranger mkfastq + count + aggr) provided by 10X Genomics, clean data files were generated.
+                    <div style="height: .3in;"></div>
+                    - Data was then preprocessed to remove noisey samples and genes.
                 </div>
-                <div class="contbox thirdcol">
-                    <h4 style="text-align: center;">Guding Questions:</h4>
-                    1) Identify the population of origin for plaque-resident macrophages
-                    <ul class="dashlist">
-                        <li>What genes are highly expressed in this population?</li>
-                        <li>What cell type does this population resemble?</li>
-                    </ul>
-                    2) Characterize heterogeity of plaque-resident Cx3cr1<sup>+</sup> macrophage derived cells:
-                    <ul class="dashlist">
-                        <li>What are the characteristic expression patterns of each cluster?</li>
-                    </ul>
-                    3) Identify differences in populations found in plaque progression and regression:
-                    <ul class="dashlist">
-                        <li>Are certain cell populations preferentially found in each experimental group?</li>
-                        <li>What genes are over-expressed in each experimental group?</li>
-                    </ul>
+
+                <h4>Single Cell Clustering and Feature Selection</h4>
+                <div style="text-align-last: center">
+                    - 32 principal compenents were derived by PCA and used to perform Louvain community detection, and t-SNE visualization.
+                    <div style="height: .3in;"></div>
+                    - Scanpy used to perform One vs Rest statistical testing with the overestimated-variance T-test, allowing for identification of genes which were significantly overexpressed in each Louvain cluster (Wolf 2018).
                 </div>
-                <div class="contbox thirdcol">
-                    <h4 style="text-align: center;">Methods:</h4>
-                    <img src="res/img/exp-design.png" style="width: 100%;">
+
+                <h4>Diffusion Pseudotime Analysis</h4>
+                - Scanpy employed in order to generate a diffusion map reconstructing the divergence of cell lineages.
+                <div style="height: .3in;"></div>
+                - Scanpy then used to generate diffusion pseudotime (DPT) values for each cell relative to a Cx3cr1 high root cell (Wolf 2018).
+            </div>
+            <break></break>
+            <div class="contbox thirdcol">
+                <h2>Visualization of Single Cell Clustering:</h2>
+                <hr>
+                <img src="res/img/tsne.png" style="width: 100%;">
+                After pre-processing, we use the Louvain community detection algorithm for clustering of cells from both experiemntal groups. 
+                We then use PCA (with 32 dimensions) followed by t-SNE for visualization of the single cell populations in 2-dimensions. 
+                Above are t-SNE plots of the Louvain clusters alongside the experimental group to which each cell belongs.
+            </div>
+            <div class="contbox thirdcol">
+                <h2>Exp. Group Representation by Cluster:</h2>
+                <hr>
+                <img src="res/img/louvain-prop.png" style="width: 100%;">
+                Here we compare the proportion of the two experimental groups composing each of the clusters.
+                On the left is represented the percentage of each experimental groups's cells found in each cluster.
+                On the right is the proportion of each cluster which is composed by each experimental group.
+            </div>
+            <div id="pathology" class="contbox thirdcol">
+                <h2>Heterogeneity of Louvain Clusters:</h2>
+                <hr>
+                <img src="res/img/top-gene-heatmap.png" style="width: 100%;">
+                <div style="width: 100%; float: left;">
+                    <img src="res/img/top-gene-heatmap-colorbar.png" style="width: 60%; float: right; clear: both;">
                 </div>
-                <break></break>
-                <div class="contbox thirdcol">
-                    <h4 style="text-align: center;">Visualization of Single Cell Clustering:</h4>
-                    <img src="res/img/tsne.png" style="width: 100%;">
-                    After pre-processing, we use the Louvain community detection algorithm for clustering of cells from both experiemntal groups. 
-                    We then use PCA (with 32 dimensions) followed by t-SNE for visualization of the single cell populations in 2-dimensions. 
-                    Above are t-SNE plots of the Louvain clusters alongside the experimental group to which each cell belongs.
-                </div>
-                <div class="contbox thirdcol">
-                    <h4 style="text-align: center;">Experimental Group Representation by Cluster:</h4>
-                    <img src="res/img/louvain-prop.png" style="width: 100%;">
-                    Here we compare the proportion of the two experimental groups composing each of the clusters.
-                    On the left is represented the percentage of each experimental groups's cells found in each cluster.
-                    On the right is the proportion of each cluster which is composed by each experimental group.
-                </div>
-                <div id="pathology" class="contbox thirdcol">
-                    <h4 style="text-align: center;">Heterogeneity of Louvain Clusters:</h4>
-                    <img src="res/img/top-gene-heatmap.png" style="width: 100%;">
-                    
-                </div>
+                Shown here are the top 10 differentially expressed genes by Louvain cluster on the y-axis, with each of the single cell observations on the x-axis.
+                Color-bars on either side denote which Louvain cluster the given gene/cell belongs to.
+                We see that there are distinct clusters of elevated expression for each cluster, with some similarity between select clusters.
+            </div>
+            <div class="contbox thirdcol">
+                <h2>Diffusion Pseudotime:</h2>
+                <hr>
+                <img src="res/img/dpt.png" style="width: 100%;">
+                Diffusion pseudotime uses a random-walk based model in order to reconstruct the path taken by differentiating cells.
+                We see that our Cx3cr1 positive cell population, largely localized in louvain cluster 7, falls at the far end of the diffuion map. 
+                Notably, cluster 3 stands out from our other populations
+            </div>
+            <break></break>
+            <div class="contbox thirdcol">
+                <h2>References:</h2>
+                <hr>
+                <ul class="dashlist">
+                    <li>
+                        Haghverdi, L., Buettner, F., & Theis, F. J. (2015). Diffusion maps for high-dimensional single-cell analysis of differentiation data. Bioinformatics, 31(18), 2989-2998.
+                    </li>
+                    <li>
+                        Wolf, F. A., Angerer, P., & Theis, F. J. (2018). SCANPY: large-scale single-cell gene expression data analysis. Genome biology, 19(1), 15.
+                    </li>
+                </ul>                
             </div>
         </div>
     </div>
