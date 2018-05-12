@@ -5,10 +5,11 @@ body{
 }
 #container{
     width: 48in;
-    height: 60in;
+    height: 59in;
     border: solid 8px black;
     overflow: hidden;
     padding: .5in 0;
+    margin: auto;
 }
 /*Font Sizing*/
 h1{
@@ -75,7 +76,7 @@ hr{
     border: 2px solid black;
 }
 .results-spacer{
-    height: .2in;
+    height: .1in;
 }
 #pathology ul{
     margin: 5px;
@@ -105,7 +106,7 @@ hr{
     flex-wrap: wrap;
 }
 .flexcol{
-    height: 54in;
+    height: 56in;
     display: flex;
     flex-direction: column;
     /*justify-content: space-between;*/

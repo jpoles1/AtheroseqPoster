@@ -4,6 +4,8 @@
 <head>
     <!--<title>Yaws - Jordan Poles</title>-->
     <link href="res/css/main.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
 </head>
 
 <body>
@@ -19,7 +21,7 @@
                 A. Fisher and P'ng Loke
             </h3>
         </div>
-        <div style="height: 1in;"></div>
+        <div style="height: .5in;"></div>
         <div class="flexcol">
             <div class="contbox thirdcol">
                 <h2>Abstract:</h2>
@@ -64,7 +66,7 @@
                 <h4>Treatment Groups</h4>
                 <img src="res/img/exp-design.png" style="width: 100%;">
                 <h4>Cells Extracted and Processed</h4>
-
+                <center style="color: red">NEED CONTENT HERE</center>
                 <h4>Single Cell Preprocessing</h4>
                 - Using the Cellranger analysis pipeline (cellranger mkfastq + count + aggr) provided by 10X Genomics, clean data files were generated.
                 <div style="height: .3in;"></div>
@@ -109,7 +111,7 @@
             <div id="pathology" class="contbox thirdcol">
                 <h2>Heterogeneity of Louvain Clusters:</h2>
                 <hr>
-                <img src="res/img/top-gene-heatmap.png" style="width: 100%;">
+                <img src="res/img/top-gene-heatmap-cropped.png" style="width: 100%;">
                 <div style="width: 100%; float: left;">
                     <sup style="float:right"><b>Louvain Clusters:</b></sup>
                     <br>
@@ -131,17 +133,15 @@
                 <h2>Cell Cycle Gene Expression:</h2>
                 <hr>
                 <img src="res/img/stemness.png" style="width: 100%;">
-                - Cell cycle gene expression values associated with the G1/S checkpoint, the S phase, the G2 phase, and the G2/M checkpoint were identified and summed for each cell. The average was taken for each cluster.
+                - Cell cycle gene expression values associated with the G1/S checkpoint, the S phase, the G2 phase, and the G2/M checkpoint were identified (Whitfield 2002) and summed for each cell. The average was taken for each cluster.
                 <div class="results-spacer"></div>
                 - Cluster 7 expresses cell cycle genes at much higher levels than any other cluster, suggesting it is proliferative, and that it may gives rise to the differentiating cell lineages in our overall population. 
             </div>
             <div class="contbox thirdcol">
                 <h2>Conclusions:</h2>
                 <hr>
-                <h4>Single Cell Clustering and Feature Selection</h4>
-                - 32 principal compenents were derived by PCA and used to perform Louvain community detection, and t-SNE visualization.
-                <div style="height: .3in;"></div>
-                - Scanpy used to perform One vs Rest statistical testing with the overestimated-variance T-test, allowing for identification of genes which were significantly overexpressed in each Louvain cluster (Wolf 2018).
+                <h4>Surprising heterogeneity of Cx3cr1+ monocyte derived plaque immunocytes</h4>
+                <center style="color: red">NEED CONTENT HERE</center>
             </div>
             <div class="contbox thirdcol">
                 <h2>References:</h2>
@@ -149,6 +149,9 @@
                 <ul class="dashlist">
                     <li>
                         Haghverdi, L., Buettner, F., & Theis, F. J. (2015). Diffusion maps for high-dimensional single-cell analysis of differentiation data. Bioinformatics, 31(18), 2989-2998.
+                    </li>
+                    <li>
+                        Whitfield, M. L., Sherlock, G., Saldanha, A. J., Murray, J. I., Ball, C. A., Alexander, K. E., ... & Botstein, D. (2002). Identification of genes periodically expressed in the human cell cycle and their expression in tumors. Molecular biology of the cell, 13(6), 1977-2000.
                     </li>
                     <li>
                         Wolf, F. A., Angerer, P., & Theis, F. J. (2018). SCANPY: large-scale single-cell gene expression data analysis. Genome biology, 19(1), 15.
