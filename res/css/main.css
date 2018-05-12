@@ -66,13 +66,16 @@ hr{
     padding: 40px;
     margin: 20px;
     line-height: 1.25;
-    border-radius: 15px;
+    border-radius: .1in;
     position: relative;
     text-align: justify;
 }
 .thirdcol{
     width: 30%;
     border: 2px solid black;
+}
+.results-spacer{
+    height: .2in;
 }
 #pathology ul{
     margin: 5px;
