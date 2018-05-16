@@ -28,13 +28,15 @@ h3{
 }
 h4{
     font-size: 45pt;
-    font-style: italic;
+    /*font-style: italic;*/
     margin: .6in 0 25px 0;
     text-align: center;
 }
 h5{
-    font-size: 48pt;
+    font-size: 36pt;
     margin: 0px;
+    text-align: center;
+    font-weight: 800;
 }
 .figcaption{
     font-size: 24pt;
